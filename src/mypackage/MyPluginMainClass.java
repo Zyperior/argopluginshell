@@ -1,7 +1,11 @@
 package mypackage;
 
+import http.server.response.HttpResponse;
 import http.server.serviceloader.ARGOPlugin;
 import http.server.serviceloader.PluginType;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * PluginType-tag should be what the html object sends as URL in HTTP-request.
@@ -10,7 +14,7 @@ import http.server.serviceloader.PluginType;
 public class MyPluginMainClass implements ARGOPlugin {
 
     @Override
-    public void doSomething(String doThis, String[] params) {
-
+    public HttpResponse doSomething(String doThis, Map<String, List<String>> params) {
+        return null;
     }
 }
